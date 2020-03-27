@@ -1,0 +1,17 @@
+.select {
+    margin-bottom: 2em;
+    width: 20em;
+}
+
+.footer {
+    /* border: solid red; */
+}
+
+.content {
+    height: 100%;
+    background-color: #dee3e2;;
+}
+.header {
+    position: sticky;
+    background-color: #eee3e2;;
+}
