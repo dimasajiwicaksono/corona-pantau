@@ -14,7 +14,7 @@ const ContentIndex= ()=> {
     const [data, setData] = useState({})
     const [country, setCountry] = useState([])
     const [dataCountry, setDataCountry] = useState([])
-    const [selectCountry, setSelectCountry] = useState('Indonesia')
+    const [selectCountry/*, setSelectCountry*/] = useState('Indonesia')
     const [dataProvinsi, setDataProvinsi] = useState([])
     const [dataIndonesia, setDataIndonesia] = useState({})
     const [selectProvinsi, setSelectProvinsi] = useState('DKI Jakarta')
@@ -59,6 +59,7 @@ useEffect(() => {
         setCountry(objCountry)
     }
     fetchDataIndonesia()
+// eslint-disable-next-line react-hooks/exhaustive-deps
 },[])
 
 
@@ -94,7 +95,7 @@ useEffect(() => {
                                 kasusMeninggal={data && data.attributes ? data.attributes.Kasus_Meni : ''} 
                                 loading={loading}/> </Col>
                     </Row> 
-            <CardStatistic dataIndonesia={dataIndonesia} loading={isLoading} data ={country}/>
+            <CardStatistic dataIndonesia={dataIndonesia} loading={isLoading} data ={country} dataCountry={dataCountry}/>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Skeleton, Result } from 'antd'
+import { /*Skeleton,*/ Result } from 'antd'
 import styles from './styles.module.css'
 
 function SkeletonComp() {

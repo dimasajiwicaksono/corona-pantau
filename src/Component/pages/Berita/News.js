@@ -1,10 +1,11 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import { Row, Col, Card, Typography, Avatar, Button } from 'antd'
+import { Row, Col, Card, Typography, Avatar } from 'antd'
 import { layout } from '../../Utils/helper'
 import styles from '../styles.module.css'
 import SkeletonComp from '../SkeletonComp'
 
-const { Title, Text} = Typography
+const { Title, Text } = Typography
 
 const WHO = {bg : 'white', img: 'https://cdn.worldvectorlogo.com/logos/who.svg', url :'https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public'}
 const KEMENKES={bg : 'white', img: 'https://pusdatin.kemkes.go.id/layanan/img/logo-195-balitbangkes.png', url:'https://infeksiemerging.kemkes.go.id/'}
@@ -34,7 +35,7 @@ function CardContentNews({from}) {
                 }
             >
                 <Row >
-                    <Col span={8}>
+                    <Col span={6}>
                         <Avatar
                             src =
                             {
@@ -46,13 +47,13 @@ function CardContentNews({from}) {
                             size={64}
                         />
                     </Col>
-                    <Col span={16}>
+                    <Col span={18}>
                         <Title level={3}>
                             <a href= 
                             {
                                 from === 'KEMENKES' ? KEMENKES.url :
-                                from === 'WHO' ? KEMENKES.url:
-                                from === 'UNICEF' ? KEMENKES.url : null
+                                from === 'WHO' ? WHO.url:
+                                from === 'UNICEF' ? UNICEF.url : null
                             } >
                             {
                                 from === 'KEMENKES' ? 'KEMENKES' :
@@ -61,6 +62,14 @@ function CardContentNews({from}) {
                             }
                             </a>
                         </Title>
+                        <hr/>
+                        <Text>
+                        {
+                                from === 'KEMENKES' ? 'Media Informasi Resmi Terkini Penyakit Infeksi Emerging' :
+                                from === 'WHO' ? 'Coronavirus disease (COVID-19) advice for the public':
+                                from === 'UNICEF' ? 'Novel coronavirus (COVID-19): Hal-hal yang perlu Anda ketahui' : null
+                            }
+                        </Text>
                     </Col>
                 </Row>
             </Card>

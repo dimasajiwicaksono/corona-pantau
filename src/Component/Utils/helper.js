@@ -11,7 +11,7 @@ export function convertDate(timestamp) {
     let date = new Date(timestamp);
     const hari = hariArray[date.getDay()]
     const tanggal = date.getDate()
-    const bulan = bulanArray[date.getDay()]
+    const bulan = bulanArray[date.getMonth()]
     const tahun = date.getFullYear()
     // const jam = date.getHours()
     // const menit = date.getMinutes()

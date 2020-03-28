@@ -55,7 +55,7 @@ function CardStat({status, dataIndonesia, loading}) {
                             {
                                 status === 'positif' ? today.positif !== '' && !loading? today.positif : <Spin /> :
                                 status === 'sembuh' ? today.sembuh !== ''  && !loading? today.sembuh : <Spin /> :
-                                status === 'meninggal' ? today.meninggal !== '' && !loading? today.sembuh : <Spin /> : 
+                                status === 'meninggal' ? today.meninggal !== '' && !loading? today.meninggal : <Spin /> : 
                                 null 
                             }
                         </Title>
