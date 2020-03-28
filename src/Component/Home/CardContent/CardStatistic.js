@@ -39,7 +39,7 @@ function CardStat({status, dataIndonesia, loading}) {
         sembuh : data !== undefined ? parseInt(data.sembuh.replace(',','')) : null,
         meninggal: data !== undefined ? parseInt(data.meninggal.replace(',','')) : null,
     }
-    const yesterday = { name: "Indonesia", positif:  893, sembuh: 35, meninggal: 78 }
+    const yesterday = { name: "Indonesia", positif:  1046, sembuh: 46, meninggal: 87 }
     const persen = {
         positif : data !== undefined ? ((today.positif - yesterday.positif )/ today.positif )* 100 : '',
         sembuh : data !== undefined ? today.sembuh/today.positif*100 : '',
